@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>shrmn:summary_birthday2</id>
+	<version>2.1</version>
+
+	<file name="$themedir/Profile.template.php">
+		<operation>
+			<search position="replace"><![CDATA[	if (!isset($context['disabled_fields']['gender']))
+		echo '
+				<tr>
+					<td><b>', $txt['gender'], ': </b></td>
+					<td>', $context['member']['gender']['name'], '</td>
+				</tr>';]]></search>
+			<add><![CDATA[	if (!isset($context['disabled_fields']['gender']))
+		echo '
+				<tr>
+					<td><b>', $txt['gender'], ': </b></td>
+					<td>', $context['member']['gender']['name'], '</td>
+				</tr>';
+				
+list ($year, $month, $day) = explode('-', $context['member']['birth_date']);
+$bday = $day == '00' ? '' : ($txt['months_titles'][(int) $month] . ' ' . $day . ($year != '0000' ? ', ' . $year : ''));
+
+                        // Let's show it!
+                        if (!empty($bday))
+                          {
+      			    echo '
+            			<tr>
+               				<td><b>', $txt['my_birthday'] ,': </b></td>
+               				<td>', $bday, '</td>
+            			</tr>';
+    			  }
+]]></add>
+		</operation>
+	</file>
+
+	<file name="$languagedir/Modifications.english.php">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+$txt['my_birthday'] = 'Birthday';
+]]></add>
+		</operation>
+	</file>
+</modification>

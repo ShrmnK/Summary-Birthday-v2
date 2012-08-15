@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>shrmn:summary_birthday2</id>
+	<name>Birthday on Profile Summary v2</name>
+	<version>2.1</version>
+	<type>modification</type>
+
+	<install for="1.1.0 - 1.1.99">
+		<readme type="file">readme.txt</readme>
+		<modification type="file">summary_birthday_1x.xml</modification>
+	</install>
+
+	<install for="2.0 RC3, 2.0 RC4, 2.0 RC5, 2.0">
+		<readme type="file">readme.txt</readme>
+		<modification type="file">summary_birthday2_2x.xml</modification>
+	</install>
+	
+	<install for="2.0 RC2">
+		<readme type="file">readme.txt</readme>
+		<modification type="file">summary_birthday_2x.xml</modification>
+	</install>
+
+	<uninstall for="1.1.0 - 1.1.99">
+		<modification type="file" reverse="true">summary_birthday_1x.xml</modification>
+	</uninstall>
+
+	<uninstall for="2.0 RC3, 2.0 RC4, 2.0 RC5, 2.0">
+		<modification type="file" reverse="true">summary_birthday2_2x.xml</modification>
+	</uninstall>
+	
+	<uninstall for="2.0 RC2">
+		<modification type="file" reverse="true">summary_birthday_2x.xml</modification>
+	</uninstall>
+
+</package-info>
