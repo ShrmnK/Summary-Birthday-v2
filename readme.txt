@@ -1,7 +1,7 @@
 Birthday on Profile Summary v2
 Author: Shrmn
 SMF Mod URL: http://custom.simplemachines.org/mods/index.php?mod=3065
-Version: 2.1
+Version: 2.2
 
 This modification will add your birthday to your profile display.
 

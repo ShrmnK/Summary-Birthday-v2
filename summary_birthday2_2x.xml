@@ -3,14 +3,17 @@
 
 <modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
 	<id>shrmn:summary_birthday2</id>
-	<version>2.1</version>
+	<version>2.2</version>
 
 	<file name="$themedir/Profile.template.php">
 		<operation>
-			<search position="after"><![CDATA[	echo '
+			<search position="after">
+				<![CDATA[	echo '
 					<dt>', $txt['age'], ':</dt>
-					<dd>', $context['member']['age'] . ($context['member']['today_is_birthday'] ? ' &nbsp; <img src="' . $settings['images_url'] . '/cake.png" alt="" />' : ''), '</dd>';]]></search>
-			<add><![CDATA[	// --Summary Birthday v2 Mod by Shrmn Start //
+					<dd>', $context['member']['age'] . ($context['member']['today_is_birthday'] ? ' &nbsp; <img src="' . $settings['images_url'] . '/cake.png" alt="" />' : ''), '</dd>';]]>
+			</search>
+			<add>
+				<![CDATA[	// --Summary Birthday v2 Mod by Shrmn Start //
 	list ($year, $month, $day) = explode('-', $context['member']['birth_date']);
 	$bday = $day == '00' ? '' : ($txt['months_titles'][(int) $month] . ' ' . $day . ($year != '0000' ? ', ' . $year : ''));
 	
@@ -22,144 +25,189 @@
 	}
 	// --Summary Birthday v2 Mod by Shrmn End //
 	
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 
 	<file name="$languagedir/Modifications.english.php">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Birthday';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.chinese-simplified.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = '生日';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.chinese-traditional.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = '生日';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.malay.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Ulang Tahun';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.russian.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'День рождения';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.italian.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Compleanno';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.spannish_es.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Cumpleaños';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.french.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Anniversaire';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.swedish.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Födelsedag';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.turkish.php" error="skip">
 		<operation>
 			<search position="end" />
-			<add><![CDATA[
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Doğum Günü';
-]]></add>
+]]>
+			</add>
 		</operation>
 	</file>
 	<file name="$languagedir/Modifications.portuguese_pt.php" error="skip">
-        <operation>
-            <search position="end" />
-            <add><![CDATA[
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Aniversário';
-]]></add>
-        </operation>
-    </file>
-    <file name="$languagedir/Modifications.portuguese_pt-utf8.php" error="skip">
-        <operation>
-            <search position="end" />
-            <add><![CDATA[
+]]>
+			</add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.portuguese_pt-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Anivers&aacute;rio';
-]]></add>
-        </operation>
-    </file>
+]]>
+			</add>
+		</operation>
+	</file>
 	<file name="$languagedir/Modifications.portuguese_brazilian.php" error="skip">
-        <operation>
-            <search position="end" />
-            <add><![CDATA[
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Aniversário';
-]]></add>
-        </operation>
-    </file>
-    <file name="$languagedir/Modifications.portuguese_brazilian-utf8.php" error="skip">
-        <operation>
-            <search position="end" />
-            <add><![CDATA[
+]]>
+			</add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.portuguese_brazilian-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Anivers&aacute;rio';
-]]></add>
-        </operation>
-    </file>
-    <file name="$languagedir/Modifications.dutch.php" error="skip">
-        <operation>
-            <search position="end" />
-            <add><![CDATA[
+]]>
+			</add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.dutch.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Verjaardag';
-]]></add>
-        </operation>
-    </file>
-    <file name="$languagedir/Modifications.german.php" error="skip">
-        <operation>
-            <search position="end" />
-            <add><![CDATA[
+]]>
+			</add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.german.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Geburtstag';
-]]></add>
-        </operation>
-    </file>
-    <file name="$languagedir/Modifications.german_informal.php" error="skip">
-        <operation>
-            <search position="end" />
-            <add><![CDATA[
+]]>
+			</add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.german_informal.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
 $txt['my_birthday'] = 'Geburtstag';
-]]></add>
-        </operation>
-    </file>
+]]>
+			</add>
+		</operation>
+	</file>
+	<file name="$languagedir/Modifications.hungarian.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add>
+				<![CDATA[
+$txt['my_birthday'] = 'Sz&uuml;let&eacute;snapom';
+]]>
+			</add>
+		</operation>
+	</file>
 </modification>
